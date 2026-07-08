@@ -17,6 +17,12 @@
      you know what to do).
 -->
 
+## Release 2.26.0 (2026-07-08)
+
+### Improvements
+
+- Improved the performance of commands that interact with Git repositories by checking whether the `git` command-line tool is available at most once per CodeQL CLI invocation.
+
 ## Release 2.25.6 (2026-06-04)
 
 ### Improvements
