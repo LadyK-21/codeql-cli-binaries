@@ -17,6 +17,9 @@
      you know what to do).
 -->
 
+## Release 2.26.1 (2026-07-15)
+
+- There are no user-facing changes in this release.
 ## Release 2.26.0 (2026-07-08)
 
 ### Improvements
