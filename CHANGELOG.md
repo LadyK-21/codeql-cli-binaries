@@ -17,6 +17,33 @@
      you know what to do).
 -->
 
+## Release 2.27.0 (2026-09-09)
+
+### New Features
+
+- CodeQL now supports native Linux arm64 (`linux-arm64`) as a first-class
+  platform. The per-platform CLI (`codeql-linux-arm64.zip`) and CodeQL bundle
+  (`codeql-bundle-linux-arm64.tar.gz` and `codeql-bundle-linux-arm64.tar.zst`)
+  are available as release assets. Arm64 binaries are provided as a per-platform
+  download only, and are not included in the combined `codeql.zip`,
+  `codeql-bundle.tar.gz`, or `codeql-bundle.tar.zst`.
+- CodeQL can now take advantage of an organization's private registry
+  configurations in Code Scanning Default Setup to authenticate to container
+  registries or the GitHub API when trying to fetch custom queries or packs.
+  This allows custom queries or packs to be accessed from private locations in
+  Code Scanning Default Setup as long as suitable "Git Source" or "Docker
+  Registry" private registry configurations are set up for the organization.
+
+### Deprecations
+
+- Language support for Java 9 and 10 has been deprecated and will be removed in
+  January 2027. Java 7 and 8 will continue to be supported.
+- The generic multi-platform `codeql.zip` CLI distribution is deprecated and
+  will be removed in a future release. Download the per-platform
+  `codeql-PLATFORM.zip` for your platform instead. The CLI now emits a warning
+  when it is run from an all-platforms distribution; set
+  `CODEQL_ALLOW_ALL_PLATFORMS_DIST=true` to suppress it.
+
 ## Release 2.26.4 (2026-08-26)
 
 ### New Features
